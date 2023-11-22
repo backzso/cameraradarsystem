@@ -78,20 +78,20 @@ public class WorldSimulator {
     private void drawCoordinatePlane(Graphics g) {
         g.setColor(Color.BLACK);
         // L harfi çizimi
-        g.drawLine(20, 20, 20, 350); // Dikey çizgi
-        g.drawLine(20, 350, 350, 350); // Yatay çizgi
+        g.drawLine(20, 20, 20, 350);
+        g.drawLine(20, 350, 350, 350);
     }
 
 
     private void drawTarget(Graphics g) {
         g.setColor(Color.RED);
-        g.fillRect(targetX, targetY, 10, 10); // Target
+        g.fillRect(targetX, targetY, 10, 10);
     }
 
     private void drawTowers(Graphics g) {
         g.setColor(Color.BLUE);
-        g.fillRect(50, 230, 20, 60); // Tower 1
-        g.fillRect(300, 230, 20, 60); // Tower 2
+        g.fillRect(50, 230, 20, 60);
+        g.fillRect(300, 230, 20, 60);
         Tower t1 = new Tower(50, 230);
         kafkaProducer.produceTowerPositionData(t1);
         Tower t2 = new Tower(300, 230);
@@ -102,7 +102,7 @@ public class WorldSimulator {
         Timer timer = new Timer(1000, e -> {
             if (isPlaying) {
                 Random rand = new Random();
-                int randomX = rand.nextInt(200) + 200; // Sadece pozitif x ekseninde
+                int randomX = rand.nextInt(200) + 200;
                 targetX = randomX;
                 frame.repaint();
             }
