@@ -77,7 +77,6 @@ public class WorldSimulator {
 
     private void drawCoordinatePlane(Graphics g) {
         g.setColor(Color.BLACK);
-        // L harfi çizimi
         g.drawLine(20, 20, 20, 350);
         g.drawLine(20, 350, 350, 350);
     }
